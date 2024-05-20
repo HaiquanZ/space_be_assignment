@@ -113,7 +113,7 @@ exports.updateTask = async(req, res, next) => {
 
 exports.getTaskByuser = async(req, res, next) => {
     try{
-        const result = await assignmentModel.getTaskByUser({pic: req.query.pic});
+        const result = await assignmentModel.getTaskByUser({pic: req.query.pic, type: req.query.type});
         return res.status(200).json({
             status: 'success',
             data: {
